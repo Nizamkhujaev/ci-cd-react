@@ -15,7 +15,7 @@ describe('Todos form test', () => {
         expect(inputElement).toBeTruthy();
     });
 
-    test('shoud able to type in input', () => {``
+    test('shoud able to type in input', () => {
         render(
             <Provider store = {store}>
                 <TodosForm/>
