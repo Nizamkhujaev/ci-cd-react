@@ -1,7 +1,7 @@
 name: Deploy React App
 on: push
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Get repository code
@@ -10,25 +10,9 @@ jobs:
         run: npm install --legacy-peer-deps
       - name: Test application
         run: npm run test
-  lint: 
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Get repository code
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
       - name: Lint application
         run: npm run lint
-  build:
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - name: Get repository code
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
       - name: Build application
-        run: npm run build
+        run: npm run Build
       - name: Deploy
-        run: echo Deploying...
+        run: echo Deploy...
