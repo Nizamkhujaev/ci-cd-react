@@ -13,6 +13,6 @@ jobs:
       - name: Lint application
         run: npm run lint
       - name: Build application
-        run: npm run Build
+        run: npm run build
       - name: Deploy
         run: echo Deploy...
